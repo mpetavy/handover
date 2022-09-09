@@ -8,7 +8,6 @@ import (
 	"flag"
 	"fmt"
 	"github.com/mpetavy/common"
-	"io/ioutil"
 	"net/http"
 	"os"
 	"time"
@@ -67,7 +66,7 @@ func start() error {
 		return err
 	}
 
-	err = ioutil.WriteFile(certFile.Name(), certPEM, common.DefaultFileMode)
+	err = os.WriteFile(certFile.Name(), certPEM, common.DefaultFileMode)
 	if common.Error(err) {
 		return err
 	}
@@ -83,7 +82,7 @@ func start() error {
 		return err
 	}
 
-	err = ioutil.WriteFile(keyFile.Name(), keyPEM, common.DefaultFileMode)
+	err = os.WriteFile(keyFile.Name(), keyPEM, common.DefaultFileMode)
 	if common.Error(err) {
 		return err
 	}

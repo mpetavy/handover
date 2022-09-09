@@ -2,6 +2,8 @@ module handover
 
 go 1.18
 
+require github.com/mpetavy/common v1.4.31
+
 require (
 	cloud.google.com/go v0.88.0 // indirect
 	github.com/beevik/etree v1.1.0 // indirect
@@ -26,7 +28,6 @@ require (
 	github.com/labstack/gommon v0.3.1 // indirect
 	github.com/mattn/go-colorable v0.1.11 // indirect
 	github.com/mattn/go-isatty v0.0.14 // indirect
-	github.com/mpetavy/common v1.4.31 // indirect
 	github.com/paulrosania/go-charset v0.0.0-20190326053356-55c9d7a5834c // indirect
 	github.com/quasoft/memstore v0.0.0-20191010062613-2bce066d2b0b // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
