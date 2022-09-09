@@ -2,7 +2,7 @@ module handover
 
 go 1.18
 
-require github.com/mpetavy/common v1.4.31
+require github.com/mpetavy/common v1.4.32
 
 require (
 	cloud.google.com/go v0.88.0 // indirect
@@ -48,3 +48,5 @@ require (
 	google.golang.org/protobuf v1.27.1 // indirect
 	software.sslmate.com/src/go-pkcs12 v0.0.0-20210415151418-c5206de65a78 // indirect
 )
+
+//replace github.com/mpetavy/common => ../common
