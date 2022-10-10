@@ -1,6 +1,6 @@
 module handover
 
-go 1.18
+go 1.19
 
 require github.com/mpetavy/common v1.4.42
 
