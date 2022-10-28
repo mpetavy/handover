@@ -114,7 +114,7 @@ func (app *application) basicAuth(next http.HandlerFunc) http.HandlerFunc {
 				next.ServeHTTP(w, r)
 				return
 			} else {
-				common.Warn(fmt.Errorf("Unsuccessful login: %s %s", r.RemoteAddr, app.auth.username))
+				common.Warn("Unsuccessful login: %s %s", r.RemoteAddr, app.auth.username)
 			}
 		}
 
