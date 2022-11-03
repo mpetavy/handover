@@ -1,7 +1,7 @@
 package main
 
 import (
-	"crypto/rsa"
+	"crypto/ecdsa"
 	"crypto/sha256"
 	"crypto/subtle"
 	"encoding/pem"
@@ -71,7 +71,10 @@ func start() error {
 		return err
 	}
 
-	keyPEM := common.PrivateKeyAsPEM(tlsConfig.Certificates[0].PrivateKey.(*rsa.PrivateKey))
+	keyPEM, err := common.PrivateKeyAsPEM(tlsConfig.Certificates[0].PrivateKey.(*ecdsa.PrivateKey))
+	if common.Error(err) {
+		return err
+	}
 	keyBytes, _ := pem.Decode(keyPEM)
 	if keyBytes == nil {
 		return fmt.Errorf("cannot find PEM block with key")
