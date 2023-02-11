@@ -127,7 +127,5 @@ func (app *application) basicAuth(next http.HandlerFunc) http.HandlerFunc {
 }
 
 func main() {
-	defer common.Done()
-
 	common.Run([]string{"d", "u", "p"})
 }
