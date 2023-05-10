@@ -2,7 +2,7 @@ module handover
 
 go 1.19
 
-require github.com/mpetavy/common v1.6.0
+require github.com/mpetavy/common v1.6.1
 
 require (
 	cloud.google.com/go v0.110.2 // indirect
