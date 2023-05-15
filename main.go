@@ -23,7 +23,7 @@ var (
 )
 
 func init() {
-	common.Init("handover", "1.0.0", "", "", "2017", "simple HTTPS download service", "mpetavy", fmt.Sprintf("https://github.com/mpetavy/%s", common.Title()), common.APACHE, nil, start, nil, nil, 0)
+	common.Init("handover", "", "", "", "2017", "simple HTTPS download service", "mpetavy", fmt.Sprintf("https://github.com/mpetavy/%s", common.Title()), common.APACHE, nil, start, nil, nil, 0)
 }
 
 type application struct {
