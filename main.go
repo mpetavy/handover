@@ -4,6 +4,7 @@ import (
 	"crypto/ecdsa"
 	"crypto/sha256"
 	"crypto/subtle"
+	"embed"
 	"encoding/pem"
 	"flag"
 	"fmt"
@@ -22,8 +23,11 @@ var (
 	keyFile  *os.File
 )
 
+//go:embed go.mod
+var resources embed.FS
+
 func init() {
-	common.Init("handover", "", "", "", "2017", "simple HTTPS download service", "mpetavy", fmt.Sprintf("https://github.com/mpetavy/%s", common.Title()), common.APACHE, nil, start, nil, nil, 0)
+	common.Init("", "", "", "", "simple HTTPS download service", "", "", "", &resources, start, nil, nil, 0)
 }
 
 type application struct {
